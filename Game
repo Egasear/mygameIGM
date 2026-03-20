@@ -1,0 +1,46 @@
+Let’s make a game!
+  name:Omega Clicker
+  by:Gubby
+  version:1.0
+ 
+Settings
+  building cost increase:125%
+ 
+Buttons
+ 
+  *omega
+    name:Omega
+    desc:Click this to get Omegas.
+    on click:yield 1 omegas
+ 
+Resources
+  *omegas|om
+    name:Omega[s?omegas]
+    desc:The final letter in Greek.
+  *highscore|hs
+    name:Highest Omegas
+    desc:Your highscore
+    is always:om:max
+ 
+Upgrades
+  *up1|ob
+    name:Omega Batteries
+    desc:Boosts Omegas!
+ 
+  *up2|sb
+    name:Speed Boost
+    desc:Boosts your Psis.
+ 
+Buildings
+  *psi|ps
+    name:Psi
+    desc:A psi that makes omegas twice a second.
+    cost:50 omegas
+    on tick:give 2 om
+ 
+Shinies
+*luckyGnome
+  name:Lucky gnome
+  on click:yield (random(7,77)) om
+  movement:anywhere fade bounce moveRandom
+  frequency:120
